@@ -1,25 +1,27 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeDevCommand": "yarn dev",
-    "beforeBuildCommand": "yarn build",
-    "devPath": "http://localhost:1420",
-    "distDir": "../dist",
-    "withGlobalTauri": false
+    "beforeBuildCommand": "pnpm build",
+    "beforeDevCommand": "pnpm dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../build"
   },
   "package": {
-    "productName": "memory-games-maker",
-    "version": "0.0.0"
+    "productName": "memory-game-maker",
+    "version": "0.1.0"
   },
   "tauri": {
     "allowlist": {
-      "all": false,
-      "shell": {
-        "all": false,
-        "open": true
-      }
+      "all": false
     },
     "bundle": {
       "active": true,
+      "category": "DeveloperTool",
+      "copyright": "",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
@@ -28,7 +30,22 @@
         "icons/icon.ico"
       ],
       "identifier": "com.tauri.dev",
-      "targets": "all"
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
     },
     "security": {
       "csp": null
@@ -39,10 +56,10 @@
     "windows": [
       {
         "fullscreen": false,
+        "height": 600,
         "resizable": true,
-        "title": "memory-games-maker",
-        "width": 800,
-        "height": 600
+        "title": "Memory Games Maker",
+        "width": 800
       }
     ]
   }
