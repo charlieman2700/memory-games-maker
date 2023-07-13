@@ -1,21 +1,17 @@
 <script lang="ts">
-  import Card from "$lib/components/Card.svelte";
+  import SplashScreen from "./components/SplashScreen.svelte";
 </script>
 
-<main class={"text-center relative h-screen flex flex-col"}>
-  <h1 class="mt-2 text-2xl font-bold">Memory Game</h1>
-  <div class="  my-auto lg:px-2 cards-container">
-    {#each { length: 24 } as _}
-      <Card />
-    {/each}
-  </div>
-</main>
-
-<style>
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-</style>
+<div
+  class="bg-[#9BDFFE] min-h-screen flex-col justify-center flex items-center"
+>
+  <SplashScreen />
+  <nav class=" mt-10">
+    <li>
+      <a href="/gameMaker">Administrador de juegos</a>
+    </li>
+    <li>
+      <a href="/game">Modo Juego</a>
+    </li>
+  </nav>
+</div>
